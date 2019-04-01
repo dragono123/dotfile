@@ -1,0 +1,21 @@
+[General]
+screenCount=1
+
+[LegacySession: saved at previous logout]
+count=0
+
+[Session: saved at previous logout]
+clientId1=10152140147d8000155040240800000006810006
+clientId2=10152140147d8000154976514100000005750006
+count=2
+discardCommand2[$e]=rm,$HOME/.config/session/kwin_10152140147d8000154976514100000005750006_1550444698_46797
+program1=/usr/lib/org_kde_powerdevil
+program2=/usr/bin/kwin_x11
+restartCommand1=/usr/lib/org_kde_powerdevil,-session,10152140147d8000155040240800000006810006_1550444698_43530
+restartCommand2=/usr/bin/kwin_x11,-session,10152140147d8000154976514100000005750006_1550444698_46797
+restartStyleHint1=0
+restartStyleHint2=0
+userId1=dragono123
+userId2=dragono123
+wasWm1=false
+wasWm2=true
