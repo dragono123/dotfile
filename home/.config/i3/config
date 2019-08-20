@@ -239,5 +239,5 @@ exec firefox
 exec discord
 exec rhythmbox
 exec xset led 3
-exec xautolock -time 10 -locker lock -notify 30 -notifier 'notify-send "locker" "30 seconds before lock"'
+exec xautolock -time 10 -locker i3lock -notify 30 -notifier 'notify-send "locker" "30 seconds before lock"' -corners 000-
 exec setxkbmap -rules evdev -model pc104 -layout "fr,us" -option 'grp:alt_shift_toggle'
