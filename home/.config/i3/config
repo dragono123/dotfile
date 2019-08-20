@@ -226,7 +226,7 @@ bindsym XF86AudioPrev exec playerctl previous
 
 for_window [class="^.*"] border pixel 1
 
-assign [class="Firefox"] $ws2
+assign [class="firefox"] $ws2
 assign [class="discord"] $ws3
 assign [class="calibre"] $ws4
 assign [class="Rhythmbox"] $ws10
