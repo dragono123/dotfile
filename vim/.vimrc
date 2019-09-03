@@ -9,7 +9,6 @@ call plug#begin('~/.vim/plugged')
 
 
 Plug 'scrooloose/nerdtree'
-Plug 'vim-syntastic/syntastic'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tomtom/tcomment_vim'
 
