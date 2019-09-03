@@ -8,11 +8,11 @@
 # i3lock -i $HOME/.config/i3wm-themer/templated_themes/Minimal/MinimalBlur.png
 # i3lock -i /tmp/screenshotblur.png
 i3lock -B=100 --indicator -k \
-    --insidecolor=00000030 --ringcolor=290a56ff --linecolor=00000000 \
-    --insidevercolor=00000030 --ringvercolor=290a567f \
-    --insidewrongcolor=00000030 --ringwrongcolor=f082377f \
-    --bshlcolor=f082377f --keyhlcolor=127ebe7f \
-    --separatorcolor=290a56ff \
+    --insidecolor=00000030 --ringcolor=DC143Cff --linecolor=00000000 \
+    --insidevercolor=00000030 --ringvercolor=C0C0C0ff \
+    --insidewrongcolor=00000030 --ringwrongcolor=696969ff \
+    --bshlcolor=696969ff --keyhlcolor=808080ff \
+    --separatorcolor=DC143Cff \
     --verifcolor=ffffffff --wrongcolor=ffffffff --layoutcolor=ffffffff \
     --timestr="%H:%M:%S" --timecolor=ffffffff \
     --datestr="%A, %m %Y" --datecolor=ffffffff \

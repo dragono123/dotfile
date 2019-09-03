@@ -2,34 +2,39 @@ set nocompatible  	" This is vim, this is superior
 filetype off 		" required for vundle !
 
 
-" set the runtime path to include Vundle
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" let Vundle managed Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+" Specify a directory for plugins
+" - For Neovim: ~/.local/share/nvim/plugged
+" - Avoid using standard Vim directory names like 'plugin'
+call plug#begin('~/.vim/plugged')
 
-Plugin 'scrooloose/nerdtree'
-Plugin 'vim-syntastic/syntastic'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'valloric/youcompleteme'
-Plugin 'tomtom/tcomment_vim'
+
+Plug 'scrooloose/nerdtree'
+Plug 'vim-syntastic/syntastic'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'tomtom/tcomment_vim'
 
 " For snippets
-Plugin 'honza/vim-snippets'
-Plugin 'SirVer/ultisnips'
-Plugin 'jiangmiao/auto-pairs'
+Plug 'honza/vim-snippets'
+Plug 'SirVer/ultisnips'
+Plug 'jiangmiao/auto-pairs'
 
 " airlines
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
-Plugin 'powerline/powerline'
-Plugin 'powerline/fonts' 
+Plug 'powerline/powerline'
+Plug 'powerline/fonts' 
 
 " theme
-Plugin 'morhetz/gruvbox'
+Plug 'morhetz/gruvbox'
 
-call vundle#end()            " required
+" Use release branch
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+Plug 'dense-analysis/ale'
+
+" Initialize plugin system
+call plug#end()
 filetype plugin indent on    " required
 
 syntax enable
