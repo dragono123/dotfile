@@ -32,6 +32,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'dense-analysis/ale'
 
+Plug 'glacambre/firenvim', { 'do': function('firenvim#install') }
+
 " Initialize plugin system
 call plug#end()
 filetype plugin indent on    " required
@@ -57,7 +59,6 @@ set showmatch
 
 " self explained
 set number
-set relativenumber
 
 set splitright
 
@@ -88,6 +89,9 @@ set smarttab
 " Set to auto read when a file is changed from the outside
 set autoread
 
+" Set the background to dark
+
+set background=dark
 " just hit backspace without this one and
 " see for yourself
 set backspace=indent,eol,start
@@ -150,3 +154,50 @@ hi CursorLineNR guibg=NONE ctermbg=NONE
 
 noremap <C-t> :call mappings#transparency#Toggle_transparent()<CR>
 let g:is_transparent=1
+
+""" Coc configuration
+
+" Use K to show documentation in preview window
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+
+" Better display for messages
+set cmdheight=2
+
+" Use tab for trigger completion with characters ahead and navigate.
+" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" Remap for rename current word
+nmap <leader>rn <Plug>(coc-rename)
+
+
+" Use `[g` and `]g` to navigate diagnostics
+nmap <silent> [g <Plug>(ale_previous_wrap)
+nmap <silent> ]g <Plug>(ale_next_wrap)
+
+" Go to definition
+" nmap <silent> gd : ALEGoToDefinitionInVSplit<CR>
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gvd :vsplit<CR> <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+

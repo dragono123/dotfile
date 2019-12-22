@@ -225,6 +225,9 @@ bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
+# Brightness controls
+bindsym XF86KbdBrightnessUp exec --no-startup-id xbacklight -inc 5
+bindsym XF86KbdBrightnessDown exec --no-startup-id xbacklight -dec 5
 
 for_window [class="^.*"] border pixel 1
 
@@ -234,7 +237,7 @@ assign [class="calibre"] $ws4
 assign [class="Rhythmbox"] $ws10
 
 
-exec compton
+exec picom
 exec termite
 exec nitrogen --set-scaled $HOME/.config/background/wallpaper.png
 exec firefox
